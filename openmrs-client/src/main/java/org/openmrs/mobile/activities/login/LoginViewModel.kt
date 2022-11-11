@@ -116,13 +116,17 @@ class LoginViewModel @Inject constructor(
 
     fun saveLocationsToDatabase(locationList: List<LocationEntity>, selectedLocation: String) {
         OpenmrsAndroid.setLocation(selectedLocation)
-        locationDAO.deleteAllLocations()
-        locationList.forEach {
-            addSubscription(locationDAO.saveLocation(it)
-                    .observeOn(Schedulers.io())
-                    .subscribe()
-            )
-        }
+        addSubscription(locationDAO.deleteAllLocations()
+                .map {
+                    locationList.forEach {
+                        locationDAO.saveLocation(it).execute()
+                    }
+                    return@map true
+                }
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({}, {})
+        )
     }
 
     fun fetchLocations(url: String) {
