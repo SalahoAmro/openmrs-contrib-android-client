@@ -58,7 +58,7 @@ object ApplicationConstants {
     const val EMPTY_DASH_REPRESENTATION = "---"
     const val COMMA_WITH_SPACE = ", "
     const val PRIMARY_KEY_ID = "_id"
-    const val MIN_NUMBER_OF_PATIENTS_TO_SHOW = 7;
+    const val MIN_NUMBER_OF_PATIENTS_TO_SHOW = 7
     const val ABOUT_OPENMRS_URL = "https://openmrs.org/about/"
 
     object OpenMRSSharedPreferenceNames {
@@ -113,8 +113,6 @@ object ApplicationConstants {
         const val FORM_FIELDS_BUNDLE = "formFieldsBundle"
         const val FORM_FIELDS_LIST_BUNDLE = "formFieldsListBundle"
         const val FORM_PAGE_BUNDLE = "formPageBundle"
-        const val PATIENT_QUERY_BUNDLE = "patientQuery"
-        const val PATIENTS_START_INDEX = "patientsStartIndex"
         const val PROVIDER_BUNDLE = "providerID"
         const val ALLERGY_UUID = "allergy_uuid"
         const val PATIENT_UUID = "patient_uuid"
@@ -148,8 +146,6 @@ object ApplicationConstants {
 
     object RequestCodes {
         const val START_SETTINGS_REQ_CODE = 102
-        const val IMAGE_REQUEST = 1
-        const val GALLERY_IMAGE_REQUEST = 2
     }
 
     object OpenMRSThemes {

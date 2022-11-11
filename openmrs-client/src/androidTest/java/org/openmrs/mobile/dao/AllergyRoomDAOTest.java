@@ -20,15 +20,16 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.filters.LargeTest;
 import androidx.test.platform.app.InstrumentationRegistry;
 
+import com.openmrs.android_sdk.library.dao.AllergyRoomDAO;
+import com.openmrs.android_sdk.library.databases.AppDatabase;
+import com.openmrs.android_sdk.library.databases.entities.AllergyEntity;
+
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import com.openmrs.android_sdk.library.dao.AllergyRoomDAO;
-import com.openmrs.android_sdk.library.databases.AppDatabase;
-import com.openmrs.android_sdk.library.databases.entities.AllergyEntity;
 
 @RunWith(AndroidJUnit4.class)
 @LargeTest

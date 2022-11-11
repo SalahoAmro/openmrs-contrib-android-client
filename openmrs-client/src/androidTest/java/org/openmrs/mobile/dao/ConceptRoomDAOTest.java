@@ -14,11 +14,16 @@
 
 package org.openmrs.mobile.listeners.watcher.dao;
 
+import java.util.Objects;
+
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule;
 import androidx.room.Room;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.filters.LargeTest;
 import androidx.test.platform.app.InstrumentationRegistry;
+
+import com.openmrs.android_sdk.library.databases.AppDatabase;
+import com.openmrs.android_sdk.library.databases.entities.ConceptEntity;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -26,10 +31,6 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import com.openmrs.android_sdk.library.databases.AppDatabase;
-import com.openmrs.android_sdk.library.databases.entities.ConceptEntity;
-
-import java.util.Objects;
 
 @RunWith(AndroidJUnit4.class)
 @LargeTest
